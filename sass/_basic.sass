@@ -41,14 +41,8 @@ h2
 	margin-bottom: 15px
 
 img
-	line-height: 0
-	font-size: 0
   max-width: 100%
   height: auto
-
-svg
-	font-size: 0
-	line-height: 0
 
 ul
   padding: 0
@@ -68,6 +62,22 @@ header, footer, section
 
 .section
 	padding: 80px 0
+	color: $primary
+	&--grey
+		background-color: #fbfaf8
+	&__title
+		color: #555555
+		font-size: 30px
+		line-height: 42px
+		+semibold
+		margin: 0
+		margin-bottom: 15px
+	&__subtitle
+		margin: 0
+		max-width: 760px
+		margin: auto
+		font-size: 16px
+		line-height: 28px
 
 .btn
 	display: inline-block
@@ -91,3 +101,7 @@ header, footer, section
 	&:hover
 		box-shadow: 0 0 0 #736357
 		background-color: darken($accent, 10%)
+
+@media (max-width: 575px)
+	.section
+		padding: 30px 0
