@@ -1,15 +1,153 @@
 .header
-  padding: 40px 0
-  background-color: grey
   .container
     position: relative
   &__composition
-    padding-top: 500px
+    text-align: center
+    &-subtitle
+      line-height: 24px
+      max-width: 560px
+      margin: 0
 .top-header
   position: absolute
-  top: 0
+  top: 40px
   left: 0
   width: 100%
   display: flex
   justify-content: space-between
-  align-items: flex-start
+  align-items: center
+  z-index: 100
+  &__logo
+    a
+      display: flex
+      justify-content: space-between
+      align-items: center
+    img
+      width: 65px
+    span
+      color: #ffffff
+      +regular
+      font-size: 26px
+.top-carousel
+  &__item
+    height: 100vh
+    min-height: 700px
+    position: relative
+    background-size: cover
+    background-position: 50% 0%
+    z-index: 20
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 1
+      background-color: rgba(17, 17, 17, 0.7)
+  &__flex-container
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    position: relative
+    z-index: 10
+  .owl-nav
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    button
+      position: absolute
+      bottom: -500px
+      width: 60px
+      height: 300px
+      z-index: 150
+      outline: none
+      &:hover
+        span
+          opacity: 1
+      &.owl-prev
+        left: 5%
+      &.owl-next
+        right: 5%
+      span
+        position: absolute
+        top: 50%
+        left: 0
+        font-size: 0
+        transition: opacity .3s
+        opacity: 0.3
+        &:after
+          content: ''
+          position: absolute
+          top: -25px
+          left: 0
+          width: 40px
+          height: 75px
+          background-color: transparent
+          background-repeat: no-repeat
+          background-size: cover
+          background-image: url('../img/svg/slide_arrow.svg')
+      &.owl-prev
+        span
+          &:after
+            transform: rotate(180deg)
+  .owl-dots
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 30px
+    z-index: 10
+    button
+      width: 11px
+      height: 11px
+      background-color: #ffffff
+      opacity: 0.5
+      z-index: 150
+      border-radius: 50%
+      display: inline-block
+      margin-right: 10px
+      outline: none
+      transition: opacity .5s, background-color .6s
+      &:hover
+        opacity: 1
+      &:last-child
+        margin-right: 0
+      &.owl-dot.active
+        background-color: transparent
+        border: 2px solid #d3c1ad
+        width: 15px
+        height: 15px
+        opacity: 1
+
+@media (max-width: 768px)
+  .top-carousel
+    .owl-nav
+      button
+        width: 30px
+        bottom: -550px
+        span
+          &:after
+            width: 30px
+            height: 55px
+    &__item
+      min-height: 600px
+    &__flex-container
+      padding: 0 20px
+      h2
+        font-size: 28px
+      h1
+        font-size: 38px
+
+@media (max-width: 575px)
+  .top-header
+    padding: 0 20px
+
+@media (max-width: 420px)
+  .top-header
+    top: 20px
+    &__logo
+      a
+        span
+          display: none

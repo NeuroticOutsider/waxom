@@ -1,0 +1,82 @@
+.navbar
+  display: flex
+  align-items: center
+  &__list-item
+    margin-right: 65px
+    display: flex
+    li
+      display: inline-block
+      margin-right: 30px
+      a
+        display: block
+        color: #ffffff
+        font-size: 14px
+        transition: color .3s
+        &:hover
+          color: $accent
+      &:last-child
+        margin-right: 0
+  &__user-block
+    display: flex
+    align-items: center
+    a
+      display: inline-block
+      font-size: 0
+      line-height: 1
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      svg
+        fill: #ffffff
+        transition: fill .3s
+        &:hover
+          fill: $accent
+  &__cart
+    svg
+      width: 18px
+      height: 24px
+  &__search
+    svg
+      width: 24px
+      height: 24px
+  .hamburger
+    display: none
+
+@media (max-width: 1200px)
+  .navbar
+    position: relative
+    &__user-block
+      margin-right: 30px
+    &__list-item
+      display: none
+      position: absolute
+      right: 0
+      top: 100%
+      margin-right: 0
+      z-index: 200
+      text-align: center
+      padding: 15px
+      padding-top: 30px
+      li
+        display: block
+        margin-right: 0
+        margin-bottom: 10px
+        a
+          font-size: 18px
+    .hamburger
+      display: block
+      padding: 5px
+      outline: none
+      width: 45px
+      height: 35px
+      position: relative
+      z-index: 200
+      &-inner, &-inner:after, &-inner:before
+        width: 35px
+        background-color: #fff
+        border-radius: 3px
+      &.is-active
+        .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+          width: 35px
+          background-color: #fff
+          border-radius: 3px
