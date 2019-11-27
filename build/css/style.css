@@ -3434,8 +3434,14 @@ h2 {
   margin-bottom: 15px; }
 
 img {
-  max-width: 100%;
-  height: auto; }
+  line-height: 0;
+  font-size: 0;
+    font-size-max-width: 100%;
+    font-size-height: auto; }
+
+svg {
+  font-size: 0;
+  line-height: 0; }
 
 ul {
   padding: 0;
@@ -3452,6 +3458,9 @@ header, footer, section {
   position: relative;
   background-size: cover;
   background-position: center; }
+
+.section {
+  padding: 80px 0; }
 
 .btn {
   display: inline-block;
@@ -3745,3 +3754,58 @@ header, footer, section {
         width: 35px;
         background-color: #fff;
         border-radius: 3px; } }
+
+.process {
+  color: #8c8c8c;
+  padding-bottom: 40px; }
+  .process__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .process__item {
+    max-width: 270px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 40px; }
+    .process__item:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 35px);
+      bottom: 0;
+      width: 70px;
+      height: 3px;
+      background-color: #f1eee9;
+      -webkit-transition: all .3s;
+      transition: all .3s; }
+    .process__item:hover svg {
+      fill: #c7b299; }
+    .process__item:hover h4 {
+      color: #c7b299; }
+    .process__item:hover:after {
+      background-color: #c7b299; }
+    .process__item svg {
+      width: 50px;
+      height: 50px;
+      fill: #555555;
+      -webkit-transition: all .3s;
+      transition: all .3s; }
+    .process__item h4 {
+      color: #555555;
+      font-size: 22px;
+      font-family: 'RalewaySemibold', sans-serif;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      -webkit-transition: all .3s;
+      transition: all .3s; }
+  .process__text p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 24px; }

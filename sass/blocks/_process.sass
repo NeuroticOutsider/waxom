@@ -1,0 +1,48 @@
+.process
+  color: $primary
+  padding-bottom: 40px
+  &__wrapper
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+  &__item
+    max-width: 270px
+    padding: 0 5px
+    text-align: center
+    cursor: pointer
+    position: relative
+    margin-bottom: 40px
+    &:after
+      content: ''
+      position: absolute
+      left: calc(50% - 35px)
+      bottom: 0
+      width: 70px
+      height: 3px
+      background-color: #f1eee9
+      transition: all .3s
+    &:hover
+      svg
+        fill: $accent
+      h4
+        color: $accent
+      &:after
+        background-color: $accent
+    svg
+      width: 50px
+      height: 50px
+      fill: #555555
+      transition: all .3s
+    h4
+      color: #555555
+      font-size: 22px
+      +semibold
+      margin-top: 30px
+      margin-bottom: 20px
+      transition: all .3s
+  &__text
+    p
+      margin-top: 0
+      margin-bottom: 30px
+      font-size: 14px
+      line-height: 24px
