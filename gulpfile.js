@@ -47,7 +47,6 @@ function scripts (done) {
 	gulp.src([
 		"libs/jquery/jquery.min.js",
 		"libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js",
-		"libs/baguettebox.js/baguetteBox.min.js",
 		"libs/wow/wow.min.js",
 		"js/common.js" // Всегда в конце
 		])
