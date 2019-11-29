@@ -20,9 +20,7 @@
 
 					<div class="top-header__logo logo">
 						<a href="#">
-							<svg>
-								<use xlink:href="img/sprite.svg#icon_logo"/>
-							</svg>
+							<svg><use xlink:href="img/sprite.svg#icon_logo"/></svg>
 							<span>Waxom</span>
 						</a>
 					</div>
@@ -439,10 +437,31 @@
 				</div>
 			</section>
 
+			<section class="video">
+
+				<div class="video__wrapper">
+					<div id="videoiFrame" class="video__frame">
+						<iframe src="https://www.youtube.com/embed/vdahvoE25HA" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="video__play" style='background-image: url("img/bg/bg_video.jpg");'>
+						<div class="video__play-composition">
+							<div class="video__play-svg" id="play" onclick="player.playVideo();">
+								<svg><use xlink:href="img/sprite.svg#icon_play"/></svg>
+							</div>
+							<h3 class="section__title">Waxom Video Presentation</h3>
+							<h4 class="section__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</h4>
+							<span>03:26</span>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
 		</main>
 
     <footer class="footer"></footer>
 
+		<script src="https://www.youtube.com/iframe_api"></script>
 		<script src="js/scripts.min.js"></script>
 	</body>
 </html>

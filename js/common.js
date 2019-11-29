@@ -62,20 +62,19 @@ $(function() {
 		$("#load-more").fadeIn();
 		$('#view-less').hide();;
 	});
-	
-	// 1. добавить возможность сворачивать viewLess
 
-	// // Load more section projects
+	// Section video
 
-  // $("#load-more").click( function(event) {
-  //   event.preventDefault();
-  //   $(".projects__list-item:hidden").slice(0, 3).slideDown();
-  //   if ($(".projects__list-item:hidden").length == 0) {
-	// 		$("#load-more").html('Roll up').addClass('projects__roll-up');
-  //     $("#load-more").click( function() {
-	// 			$(".projects__list-item").slice(6).slideUp();
-	// 			$("#load-more").html('Load more').removeClass('projects__roll-up');
-	// 		});
-  //   };
-	// });
+	$('#play').click(function() {
+    setTimeout(function(){
+      $('.video__play').fadeOut();
+    }, 300);
+  });
 });
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('videoiFrame', {
+  playerVars: { 'autoplay': 0, 'showinfo': 0, 'rel': 0},
+  videoId: 'vdahvoE25HA'
+  });
+}; 
