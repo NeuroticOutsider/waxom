@@ -64,17 +64,12 @@ $(function() {
 	});
 
 	// Section video
-
-	$('#play').click(function() {
-    setTimeout(function(){
-      $('.video__play').fadeOut();
-    }, 300);
-  });
+	
+	$('#play').on('click', function(e) {
+		e.preventDefault();
+		setTimeout(function(){
+			$('.video__play').fadeOut('slow');
+    }, 1900);
+		$("#player")[0].src += "?autoplay=1";
+	})
 });
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('videoiFrame', {
-  playerVars: { 'autoplay': 0, 'showinfo': 0, 'rel': 0},
-  videoId: 'vdahvoE25HA'
-  });
-}; 

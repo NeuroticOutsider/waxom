@@ -438,14 +438,13 @@
 			</section>
 
 			<section class="video">
-
 				<div class="video__wrapper">
-					<div id="videoiFrame" class="video__frame">
-						<iframe src="https://www.youtube.com/embed/vdahvoE25HA" frameborder="0" allowfullscreen></iframe>
+					<div class="video__frame">
+						<iframe id="player" src="https://www.youtube.com/embed/vgtTVaLj3zM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 					<div class="video__play" style='background-image: url("img/bg/bg_video.jpg");'>
 						<div class="video__play-composition">
-							<div class="video__play-svg" id="play" onclick="play();">
+							<div class="video__play-svg" id="play">
 								<svg><use xlink:href="img/sprite.svg#icon_play"/></svg>
 							</div>
 							<h3 class="section__title">Waxom Video Presentation</h3>
@@ -454,14 +453,39 @@
 						</div>
 					</div>
 				</div>
+			</section>
 
+			<section class="section devices section--grey">
+				<div class="container">
+					<div class="devices__image">
+						<img src="img/mobile_image.png" alt="">
+					</div>
+					<div class="devices__content">
+						<h3 class="section__title">Excellent for Mobile Devices.</h3>
+						<div class="devices__text">
+							<p>
+									Qisi enim ad minim veniam, quis nostrud exerci 
+									tation ullamcorper suscipit lobortis nisl ut aliquip
+									ex ea commodo consequat. Investigationes demonstraverunt 
+									lectores legere me lius quod ii legunt saepius claritas. 
+									Eodem modo typi, qui nunc nobis videntur parum clari, 
+									fiant sollemnes in futurum.
+							</p>
+						</div>
+						<ul class="devices__list">
+							<li><img src="img/svg/arrow.svg" alt=""><span>Nam liber tempor cum soluta nobis eleifend option;</span></li>
+							<li><img src="img/svg/arrow.svg" alt=""><span>Option congue nihil imperdiet doming id quod mazim placerat facer;</span></li>
+							<li><img src="img/svg/arrow.svg" alt=""><span>Eodem modo typi, qui nunc nobis videntur parum futurum;</span></li>
+							<li><img src="img/svg/arrow.svg" alt=""><span>Investigationes demonstraverunt lectores</span></li>
+						</ul>
+					</div>
+				</div>
 			</section>
 
 		</main>
 
     <footer class="footer"></footer>
 
-		<script src="https://www.youtube.com/iframe_api"></script>
 		<script src="js/scripts.min.js"></script>
 	</body>
 </html>
