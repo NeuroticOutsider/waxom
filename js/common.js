@@ -74,34 +74,57 @@ $(function() {
 	})
 
 	// Counter (section statistics)
-	
+
 	var time = 2, cc = 1;
-
   $(window).scroll(function () {
-		$('#counter').each(function() {
-			var cPos = $(this).offset().top,
-					topWindow = $(window).scrollTop();
-
+		$('#counter').each(function(){
+			var
+			cPos = $(this).offset().top,
+			topWindow = $(window).scrollTop();
 			if (cPos < topWindow + 500) {
 				if (cc < 2) {
-				  $('h6').each(function(){
-				    var i = 1,
-				    		num = $(this).data('num'),
-				    		step = 1000 * time / num,
-				    		that = $(this),
-				    		int = setInterval(function(){
-										if (i <= num) {
-											that.html(i);
-										}
-										else {
-											cc = cc + 2;
-											clearInterval(int);
-										}
-										i++;
-									},step);
-								});
-							}
-						}
+				  $('span').each(function(){
+				    var 
+				    i = 1,
+				    num = $(this).data('num'),
+				    step = 1000 * time / num,
+				    that = $(this),
+				    int = setInterval(function(){
+				      if (i <= num) {
+				        that.html(i);
+				      }
+				      else {
+				      	cc = cc + 2;
+				        clearInterval(int);
+				      }
+				      i++;
+				    },step);
+				  });
+			  }
+			}
 		});
 	});
+
+	// Posts slider
+
+	$('#posts-carousel').owlCarousel({
+    loop: false,
+		responsiveClass: true,
+		dots: false,
+    responsive:{
+        0:{
+            items:1,
+            nav: true
+        },
+        992:{
+            items:2,
+            nav: true
+        },
+        1200:{
+            items: 3,
+            nav: true
+        }
+    }
+})
+
 });

@@ -55,15 +55,17 @@
         .projects__list-image
           img
             opacity: .3
+            transform: scale(1.2)
     &-image
       line-height: 0
       background-color: #171717
       position: relative
+      overflow: hidden
       img
         height: 230px
         object-fit: cover
         width: 100%
-        transition: all .3s
+        transition: opacity .3s, transform .5s
     &-links
       opacity: 0
       position: absolute

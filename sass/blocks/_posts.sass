@@ -1,0 +1,136 @@
+.posts
+  &__slider
+    margin-top: 40px
+  &__post
+    max-width: 370px
+    width: 100%
+    position: relative
+    border: 1px solid #f8f8f8
+    cursor: pointer
+    transition: all .3s
+    margin: auto
+    &:hover
+      background-color: $secondary
+      .posts__image
+        img
+          opacity: 0.4
+          transform: scale(1.4)
+      .posts__date
+        &-num
+          background-color: $accent
+        &-month
+          background-color: darken($accent, 15%)
+      .posts__title
+        color: $accent
+      .posts__text
+        p
+          color: #ffffff
+  &__image
+    line-height: 0
+    overflow: hidden
+    img
+      object-fit: cover
+      height: 220px
+      width: 100%
+      transition: opacity .3s, transform .5s
+  &__date
+    position: absolute
+    top: 20px
+    left: 20px
+    min-width: 55px
+    z-index: 5
+    span
+      display: block
+      color: #ffffff
+      text-align: center
+      line-height: 1
+    &-num
+      background-color: #363636
+      padding: 10px
+      font-size: 24px
+      border-radius: 3px 3px 0 0
+      transition: all .3s
+    &-month
+      background-color: #252525
+      padding: 10px
+      font-size: 12px
+      +regular
+      border-radius: 0 0 3px 3px
+      transition: all .3s
+  &__description
+    padding-left: 30px
+    padding-right: 45px
+    padding-bottom: 30px
+  &__title
+    font-size: 20px
+    line-height: 32px
+    color: #555555
+    margin-top: 25px
+    margin-bottom: 10px
+  &__text
+    p
+      margin-top: 0
+      font-size: 14px
+      line-height: 22px
+      margin-bottom: 5px
+  &__link-read
+    display: inline-block
+    margin-top: 20px
+    font-size: 14px
+    line-height: 22px
+    color: $accent
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: calc(50% - 3px)
+      right: -20px
+      border: 4px solid transparent
+      border-left: 5.5px solid $accent
+  &__slider
+    &.owl-carousel
+      .owl-nav
+        text-align: center
+        margin-top: 40px
+      button
+        &.owl-next, &.owl-prev
+          width: 22px
+          height: 22px
+          border-radius: 50%
+          border: 1px solid $accent
+          position: relative
+          outline: none
+          transition: all .3s
+          &:hover
+            border: 1px solid darken($accent, 25%)
+            &:after
+              color: darken($accent, 25%)
+          &.disabled
+            border: 1px solid #d1d1d1
+            cursor: default
+            &:after
+              color: #d1d1d1
+            &:hover
+              border: 1px solid #d1d1d1
+              &:after
+                color: #d1d1d1
+          &:first-child
+            margin-right: 10px
+          span
+            display: none
+          &:after
+            position: absolute
+            top: 0
+            left: 5px
+            font-size: 17px
+            line-height: 18px
+            color: $accent
+            +regular
+            transition: all .3s
+        &.owl-next
+          &:after
+            content: '>'
+            left: 6px
+        &.owl-prev
+          &:after
+            content: '<'
