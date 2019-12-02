@@ -1,0 +1,124 @@
+.footer
+  padding: 80px 0
+  background-color: #191919
+  color: #555555
+  font-size: 14px
+  line-height: 20px
+  padding-bottom: 50px
+  &__wrap
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+  &__about
+    max-width: 260px
+    margin-bottom: 30px
+  &__logo
+    a
+      display: flex
+      align-items: center
+      svg
+        width: 65px
+        height: 60px
+        fill: #ffffff
+      span
+        font-size: 34px
+        color: #ffffff
+        +regular
+    &-text
+      p
+        margin-top: 25px
+        line-height: 24px
+        margin-bottom: 20px
+  &__read-more
+    display: inline-block
+    margin-top: 5px
+    color: #ffffff
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: calc(50% - 3px)
+      right: -20px
+      border: 4px solid transparent
+      border-left: 5.5px solid #ffffff
+    &:hover
+      border-bottom: 1px solid #ffffff
+  &__posts
+    max-width: 250px
+    margin-bottom: 30px
+  &__title
+    +semibold
+    font-size: 24px
+    color: #ffffff
+    line-height: 34px
+    margin: 25px 0
+  &__post
+    padding-bottom: 20px
+    border-bottom: 1px solid #252525
+    margin-bottom: 15px
+    display: block
+    color: #555555
+    &:hover
+      .footer__post
+        &-date
+          color: #ffffff
+        &-description
+          color: $accent
+    &:last-child
+      margin-bottom: 0
+      border-bottom: none
+    &-date
+      color: #363636
+      font-size: 12px
+      line-height: 20px
+      transition: all .3s
+    &-description
+      margin-top: 5px
+      margin-bottom: 0
+      transition: all .3s
+      a
+        color: #00bff3
+        transition: all .3s
+        &:hover
+          color: #ffffff
+          opacity: 0.8
+  &__twitter
+    max-width: 265px
+    margin-bottom: 30px
+    .footer__post
+      &:hover
+        .footer__post-date
+          color: #363636
+        .footer__post-description
+          color: #555555
+  &__widget
+    max-width: 270px
+    margin-bottom: 30px
+  &__projects-gallery
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    a
+      display: block
+      line-height: 0
+      margin-bottom: 10px
+      transition: all .3s
+      img
+        width: 130px
+        height: 100px
+        object-fit: cover
+        object-position: center
+      &:hover
+        opacity: 0.5
+
+@media (max-width: 575px)
+  .footer
+    padding: 50px 0
+    padding-bottom: 20px
+    text-align: center
+    &__wrap
+      justify-content: center
+    &__logo
+      justify-content: center

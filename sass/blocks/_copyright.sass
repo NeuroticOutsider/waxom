@@ -1,0 +1,48 @@
+.copyright
+  padding: 40px 0
+  background-color: #111111
+  font-size: 13px
+  line-height: 20px
+  color: #555555
+  padding-bottom: 30px
+  &__wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  &__info
+    margin-bottom: 10px
+    span
+      border-right: 1px solid #252525
+      padding-right: 10px
+      a
+        color: #ffffff
+        opacity: 0.6
+    a
+      padding-left: 10px
+      border-right: 1px solid #252525
+      padding-right: 10px
+      color: #555555
+      transition: all .3s
+      &:last-child
+        border-right: none
+      &:hover
+        color: $accent
+  &__author
+    margin-bottom: 10px
+    span
+      display: inline-block
+      border-right: 1px solid #252525
+      padding-right: 10px
+      padding-left: 10px
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+        border-right: none
+      a
+        color: #ffffff
+        opacity: 0.6
+        transition: all .3s
+        &:hover
+          opacity: 1
