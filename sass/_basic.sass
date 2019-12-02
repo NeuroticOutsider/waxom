@@ -10,6 +10,7 @@ body
 	overflow-x: hidden
 	opacity: 1
 	color: #ffffff
+	display: block
 	&:after
 		content: ''
 		position: absolute
@@ -104,6 +105,30 @@ header, footer, section
 	&:hover
 		box-shadow: 0 0 0 #736357
 		background-color: darken(#998675, 10%)
+	&__scroll-top
+		outline: none
+		background-color: transparent
+		border-radius: 50%
+		display: block
+		border: 1px solid $primary
+		position: fixed
+		z-index: 500
+		right: 20px
+		bottom: 20px
+		transform: rotate(-60deg)
+		transition: all .5s
+		opacity: 0
+		svg
+			width: 45px
+			height: 45px
+			fill: $primary
+		&:hover
+			transform: rotate(0deg)
+			border: 1px solid darken($accent, 10%)
+			svg
+				fill: darken($accent, 10%)
+		&.show
+			opacity: 1
 
 @media (max-width: 575px)
 	.section

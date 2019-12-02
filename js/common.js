@@ -1,5 +1,11 @@
 $(function() {
 
+	// Preloader
+
+	$('.preloader').delay(1500).fadeOut('slow');
+
+	// Hamburger
+
   $('.hamburger').click(function () {
 		$(this).toggleClass('is-active');
 		if($(this).hasClass('is-active')) {
@@ -125,6 +131,22 @@ $(function() {
             nav: true
         }
     }
-})
+	})
+
+// Button scroll top
+
+	let btnScrollTop = $('.btn__scroll-top');
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > $(this).height()) {
+			btnScrollTop.addClass('show');
+		} else {
+			btnScrollTop.removeClass('show');
+		};
+	});
+
+	btnScrollTop.click(function() {
+		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	});
 
 });
