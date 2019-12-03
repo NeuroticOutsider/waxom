@@ -1,6 +1,8 @@
 * 
 	box-sizing: border-box
-
+html, body
+	background-color: #ffffff
+	
 body
 	+light
 	font-size: 16px
@@ -34,12 +36,14 @@ h1
 	+exbold
 	margin: 0
 	margin-bottom: 15px
+	max-width: 600px
 
 h2
 	font-size: 36px
 	+regular
 	margin: 0
 	margin-bottom: 15px
+	max-width: 500px
 
 img
   max-width: 100%
@@ -71,8 +75,9 @@ header, footer, section
 		font-size: 30px
 		line-height: 42px
 		+semibold
-		margin: 0
+		margin: auto
 		margin-bottom: 15px
+		max-width: 550px
 		text-align: center
 	&__subtitle
 		margin: 0

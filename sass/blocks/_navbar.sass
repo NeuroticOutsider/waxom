@@ -1,9 +1,12 @@
 .navbar
   display: flex
   align-items: center
-  &__list-item
+  &__list-items
     margin-right: 65px
     display: flex
+    max-width: 660px
+    flex-wrap: wrap
+    justify-content: center
     li
       display: inline-block
       margin-right: 30px
@@ -19,6 +22,8 @@
   &__user-block
     display: flex
     align-items: center
+    flex-wrap: wrap
+    max-width: 130px
     a
       display: inline-block
       font-size: 0

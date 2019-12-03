@@ -3197,6 +3197,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html, body {
+  background-color: #ffffff; }
+
 body {
   font-family: 'MontserratLight', sans-serif;
   font-weight: 300;
@@ -3231,14 +3234,16 @@ h1 {
   font-family: 'RalewayExBold', sans-serif;
   font-weight: 800;
   margin: 0;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  max-width: 600px; }
 
 h2 {
   font-size: 36px;
   font-family: 'RalewayRegular', sans-serif;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  max-width: 500px; }
 
 img {
   max-width: 100%;
@@ -3271,8 +3276,9 @@ header, footer, section {
     line-height: 42px;
     font-family: 'RalewaySemibold', sans-serif;
     font-weight: 600;
-    margin: 0;
+    margin: auto;
     margin-bottom: 15px;
+    max-width: 550px;
     text-align: center; }
   .section__subtitle {
     margin: 0;
@@ -3366,25 +3372,27 @@ header, footer, section {
   -ms-flex-align: center;
   align-items: center;
   z-index: 100; }
-  .top-header__logo a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .top-header__logo a svg {
-      width: 65px;
-      height: 55px;
-      fill: #ffffff; }
-    .top-header__logo a span {
-      color: #ffffff;
-      font-family: 'RalewayRegular', sans-serif;
-      font-weight: 400;
-      font-size: 26px; }
+  .top-header__logo {
+    max-width: 190px; }
+    .top-header__logo a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .top-header__logo a svg {
+        width: 65px;
+        height: 55px;
+        fill: #ffffff; }
+      .top-header__logo a span {
+        color: #ffffff;
+        font-family: 'RalewayRegular', sans-serif;
+        font-weight: 400;
+        font-size: 34px; }
 
 .top-carousel__item {
   height: 100vh;
@@ -3524,23 +3532,29 @@ header, footer, section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .navbar__list-item {
+  .navbar__list-items {
     margin-right: 65px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    .navbar__list-item li {
+    display: flex;
+    max-width: 660px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .navbar__list-items li {
       display: inline-block;
       margin-right: 30px; }
-      .navbar__list-item li a {
+      .navbar__list-items li a {
         display: block;
         color: #ffffff;
         font-size: 14px;
         -webkit-transition: color .3s;
         transition: color .3s; }
-        .navbar__list-item li a:hover {
+        .navbar__list-items li a:hover {
           color: #c7b299; }
-      .navbar__list-item li:last-child {
+      .navbar__list-items li:last-child {
         margin-right: 0; }
   .navbar__user-block {
     display: -webkit-box;
@@ -3548,7 +3562,10 @@ header, footer, section {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 130px; }
     .navbar__user-block a {
       display: inline-block;
       font-size: 0;
@@ -3690,14 +3707,16 @@ header, footer, section {
     font-weight: 400;
     font-size: 28px;
     line-height: 40px;
-    margin: 0; }
+    margin: 0;
+    max-width: 600px; }
     .purchase h4 span {
       color: #c7b299; }
   .purchase h5 {
     font-size: 18px;
     line-height: 25px;
     margin: 0;
-    color: #615855; }
+    color: #615855;
+    max-width: 500px; }
   .purchase__btn {
     margin-top: 0; }
 
