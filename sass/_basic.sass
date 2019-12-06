@@ -23,6 +23,7 @@ body
 		top: 0
 		left: 0
 		transition: opacity .5s
+		z-index: -1
 	&.body--active
 		&:after
 			opacity: 0.8
@@ -37,6 +38,7 @@ h1
 	margin: 0
 	margin-bottom: 15px
 	max-width: 600px
+	line-height: 1.2
 
 h2
 	font-size: 36px
@@ -134,6 +136,34 @@ header, footer, section
 				fill: darken($accent, 10%)
 		&.show
 			opacity: 1
+
+// Scrollbar /////////////
+
+::-webkit-scrollbar-button
+	background-image: url('')
+	background-repeat: no-repeat
+	width: 10px
+	height: 0px
+
+::-webkit-scrollbar-track
+	background-color: #F5F5F5
+
+::-webkit-scrollbar-thumb
+	-webkit-border-radius: 3px
+	border-radius: 3px
+	background-color: darken($accent, 10%)
+
+::-webkit-scrollbar-thumb:hover
+	background-color: darken($accent, 10%)
+
+::-webkit-resizer
+	background-image: url('')
+	background-repeat: no-repeat
+	width: 10px
+	height: 0px
+
+::-webkit-scrollbar
+	width: 7px
 
 @media (max-width: 575px)
 	.section

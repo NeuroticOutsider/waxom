@@ -5,8 +5,6 @@
   line-height: 20px
   color: #555555
   padding-bottom: 30px
-  position: relative
-  z-index: 10
   &__wrap
     display: flex
     align-items: center
@@ -48,3 +46,12 @@
         transition: all .3s
         &:hover
           opacity: 1
+
+@media (max-width: 575px)
+  .copyright
+    &__author
+      span
+        margin-bottom: 5px
+        border: none
+        &:last-child
+          padding-left: 0
