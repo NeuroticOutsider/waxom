@@ -1,6 +1,4 @@
 .header
-  .container
-    position: relative
   &__composition
     text-align: center
     &-subtitle
@@ -12,10 +10,11 @@
   top: 40px
   left: 0
   width: 100%
-  display: flex
-  justify-content: space-between
-  align-items: center
   z-index: 100
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
   &__logo
     max-width: 190px
     a
@@ -30,6 +29,38 @@
         color: #ffffff
         +regular
         font-size: 34px
+  &--fixed
+    position: fixed
+    background-color: #ffffff
+    top: 0
+    padding: 10px 0
+    box-shadow: 0 5px 15px rgba(0,0,0,.3)
+    display: none
+    .top-header
+      &__logo
+        a
+          svg
+            width: 45px
+            height: 40px
+            fill: #000000
+          span
+            font-size: 28px
+            color: #000000
+    .navbar
+      &__list-items
+        li
+          a
+            color: #000000
+      &__user-block
+        a
+          svg
+            fill: #000000
+      .hamburger
+        &-inner, &-inner:after, &-inner:before
+          background-color: #000
+        &.is-active
+          .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+            background-color: #000
 .top-carousel
   &__item
     height: 100vh
@@ -145,12 +176,17 @@
 
 @media (max-width: 575px)
   .top-header
-    padding: 0 20px
-
-@media (max-width: 420px)
-  .top-header
     top: 20px
     &__logo
+      span
+        display: none
       a
-        span
-          display: none
+        svg
+          width: 50px
+          height: 45px
+    &--fixed
+      top: 0
+  .top-carousel
+    .owl-nav
+      button
+        display: none

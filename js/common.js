@@ -9,10 +9,11 @@ $(function() {
   $('.hamburger').click(function () {
 		$(this).toggleClass('is-active');
 		if($(this).hasClass('is-active')) {
-			$('.navbar__list-item').slideDown();
+			$('.navbar__list-items').slideDown();
 			$('.body').addClass('body--active');
+			$('.top-header--fixed .navbar__list-items li a').css({'color':'#fff'});
 		} else {
-			$('.navbar__list-item').slideUp();
+			$('.navbar__list-items').slideUp();
 			$('.body').removeClass('body--active');
 		};
 	});
@@ -147,6 +148,17 @@ $(function() {
 
 	btnScrollTop.click(function() {
 		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	});
+
+	// Menu fixed with scroll
+
+	$(window).scroll(function(){
+		if( $(window).scrollTop() > 300 ) {
+			$('.top-header').addClass('top-header--fixed');
+			$('.top-header--fixed').slideDown();
+		} else {
+				$('.top-header').removeClass('top-header--fixed');
+			};
 	});
 
 });
