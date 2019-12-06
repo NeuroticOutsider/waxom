@@ -1,8 +1,10 @@
 $(function() {
 
-	// Preloader
+	// Preloader and animation
 
 	$('.preloader').delay(1500).fadeOut('slow');
+
+	new WOW().init();
 
 	// Hamburger
 
